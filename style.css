@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compre cartas raras de Pokémon autênticas e de coleção. Encontre holográficas, edições limitadas e cartas promocionais com segurança e garantia.">
+  <title>Cartas Raras Pokémon | Coleção Autêntica</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">PokéRare</h1>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Coleção</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-content">
+      <h1 class="headline">Encontre Cartas Raras de Pokémon<br>Autênticas e de Coleção</h1>
+      <p class="subheadline">Transforme sua coleção com cartas cuidadosamente verificadas, avaliadas e entregues com segurança.</p>
+      
+      <div class="cta-buttons">
+        <a href="#" class="btn-primary">Explore Nossa Coleção</a>
+        <a href="#" class="btn-secondary">Adicione Sua Carta Rara Hoje</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Benefícios -->
+  <section class="benefits">
+    <div class="container">
+      <h2 class="section-title">Por que escolher a PokéRare?</h2>
+      <div class="benefits-grid">
+        
+        <div class="benefit-card">
+          <h3>🔒 Autenticidade Garantida</h3>
+          <p>Todas as cartas passam por verificação profissional antes da venda.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>⭐ Raridade Exclusiva</h3>
+          <p>Acesse edições limitadas, holográficas e promoções especiais.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>📦 Envio Seguro</h3>
+          <p>Embalagens protegidas e envio rastreável para colecionadores exigentes.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>👨‍💼 Suporte Especializado</h3>
+          <p>Nossa equipe entende o mercado Pokémon e está pronta para ajudar você a encontrar a carta perfeita.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section class="trust">
+    <div class="container">
+      <h2 class="section-title">Confiança que Colecionadores Reconhecem</h2>
+      
+      <div class="trust-content">
+        <div class="trust-item">
+          <h3>Depoimentos</h3>
+          <p>"Consegui minha Charizard 1ª Edição Shadowless com total segurança. Recomendo!"</p>
+          <strong>— Lucas Mendes, SP</strong>
+        </div>
+
+        <div class="trust-item">
+          <h3>Certificações</h3>
+          <p>✅ PSA Certified • ✅ Beckett Authentication • ✅ Cartas Verificadas</p>
+        </div>
+
+        <div class="trust-item">
+          <h3>Garantia</h3>
+          <p>Garantia de devolução em caso de problema com autenticidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 PokéRare - Cartas Raras de Pokémon Autênticas</p>
+    </div>
+  </footer>
+
+</body>
+</html>

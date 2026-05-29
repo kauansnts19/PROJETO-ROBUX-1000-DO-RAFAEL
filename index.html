@@ -1,143 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loja de Robux</title>
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body{
-      background:#111827;
-      color:white;
-    }
-
-    header{
-      background:#7c3aed;
-      padding:20px;
-      text-align:center;
-    }
-
-    header h1{
-      font-size:40px;
-    }
-
-    .hero{
-      text-align:center;
-      padding:60px 20px;
-    }
-
-    .hero h2{
-      font-size:36px;
-      margin-bottom:15px;
-    }
-
-    .hero p{
-      color:#d1d5db;
-      margin-bottom:30px;
-    }
-
-    .btn{
-      background:#22c55e;
-      color:white;
-      padding:15px 30px;
-      border:none;
-      border-radius:10px;
-      font-size:18px;
-      cursor:pointer;
-      transition:0.3s;
-    }
-
-    .btn:hover{
-      background:#16a34a;
-    }
-
-    .cards{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-      padding:40px 20px;
-    }
-
-    .card{
-      background:#1f2937;
-      width:250px;
-      padding:25px;
-      border-radius:15px;
-      text-align:center;
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-5px);
-    }
-
-    .card h3{
-      font-size:28px;
-      margin-bottom:10px;
-      color:#a78bfa;
-    }
-
-    .price{
-      font-size:32px;
-      margin:15px 0;
-      color:#22c55e;
-    }
-
-    footer{
-      text-align:center;
-      padding:20px;
-      background:#0f172a;
-      color:#9ca3af;
-      margin-top:40px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compre cartas raras de Pokémon autênticas e de coleção. Encontre holográficas, edições limitadas e cartas promocionais com segurança e garantia.">
+  <title>Cartas Raras Pokémon | Coleção Autêntica</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-  <header>
-    <h1>LOJA DE ROBUX</h1>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">PokéRare</h1>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Coleção</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-content">
+      <h1 class="headline">Encontre Cartas Raras de Pokémon<br>Autênticas e de Coleção</h1>
+      <p class="subheadline">Transforme sua coleção com cartas cuidadosamente verificadas, avaliadas e entregues com segurança.</p>
+      
+      <div class="cta-buttons">
+        <a href="#" class="btn-primary">Explore Nossa Coleção</a>
+        <a href="#" class="btn-secondary">Adicione Sua Carta Rara Hoje</a>
+      </div>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Compre Robux Rápido e Seguro</h2>
-    <p>Entrega instantânea • Melhores preços • Suporte 24h</p>
+  <!-- Benefícios -->
+  <section class="benefits">
+    <div class="container">
+      <h2 class="section-title">Por que escolher a PokéRare?</h2>
+      <div class="benefits-grid">
+        
+        <div class="benefit-card">
+          <h3>🔒 Autenticidade Garantida</h3>
+          <p>Todas as cartas passam por verificação profissional antes da venda.</p>
+        </div>
 
-    <button class="btn">Comprar Agora</button>
+        <div class="benefit-card">
+          <h3>⭐ Raridade Exclusiva</h3>
+          <p>Acesse edições limitadas, holográficas e promoções especiais.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>📦 Envio Seguro</h3>
+          <p>Embalagens protegidas e envio rastreável para colecionadores exigentes.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>👨‍💼 Suporte Especializado</h3>
+          <p>Nossa equipe entende o mercado Pokémon e está pronta para ajudar você a encontrar a carta perfeita.</p>
+        </div>
+
+      </div>
+    </div>
   </section>
 
-  <section class="cards">
+  <!-- Trust Section -->
+  <section class="trust">
+    <div class="container">
+      <h2 class="section-title">Confiança que Colecionadores Reconhecem</h2>
+      
+      <div class="trust-content">
+        <div class="trust-item">
+          <h3>Depoimentos</h3>
+          <p>"Consegui minha Charizard 1ª Edição Shadowless com total segurança. Recomendo!"</p>
+          <strong>— Lucas Mendes, SP</strong>
+        </div>
 
-    <div class="card">
-      <h3>400 Robux</h3>
-      <p class="price">R$ 9,90</p>
-      <button class="btn">Comprar</button>
+        <div class="trust-item">
+          <h3>Certificações</h3>
+          <p>✅ PSA Certified • ✅ Beckett Authentication • ✅ Cartas Verificadas</p>
+        </div>
+
+        <div class="trust-item">
+          <h3>Garantia</h3>
+          <p>Garantia de devolução em caso de problema com autenticidade.</p>
+        </div>
+      </div>
     </div>
-
-    <div class="card">
-      <h3>800 Robux</h3>
-      <p class="price">R$ 18,90</p>
-      <button class="btn">Comprar</button>
-    </div>
-
-    <div class="card">
-      <h3>1700 Robux</h3>
-      <p class="price">R$ 34,90</p>
-      <button class="btn">Comprar</button>
-    </div>
-
   </section>
 
+  <!-- Footer -->
   <footer>
-    © 2026 Loja de Robux - Todos os direitos reservados
+    <div class="container">
+      <p>&copy; 2026 PokéRare - Cartas Raras de Pokémon Autênticas</p>
+    </div>
   </footer>
 
 </body>
