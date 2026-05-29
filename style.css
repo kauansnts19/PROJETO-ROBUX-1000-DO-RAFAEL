@@ -1,102 +1,224 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compre cartas raras de Pokémon autênticas e de coleção. Encontre holográficas, edições limitadas e cartas promocionais com segurança e garantia.">
-  <title>Cartas Raras Pokémon | Coleção Autêntica</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <h1 class="logo">PokéRare</h1>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Coleção</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </div>
-  </nav>
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container hero-content">
-      <h1 class="headline">Encontre Cartas Raras de Pokémon<br>Autênticas e de Coleção</h1>
-      <p class="subheadline">Transforme sua coleção com cartas cuidadosamente verificadas, avaliadas e entregues com segurança.</p>
-      
-      <div class="cta-buttons">
-        <a href="#" class="btn-primary">Explore Nossa Coleção</a>
-        <a href="#" class="btn-secondary">Adicione Sua Carta Rara Hoje</a>
-      </div>
-    </div>
-  </header>
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  <!-- Benefícios -->
-  <section class="benefits">
-    <div class="container">
-      <h2 class="section-title">Por que escolher a PokéRare?</h2>
-      <div class="benefits-grid">
-        
-        <div class="benefit-card">
-          <h3>🔒 Autenticidade Garantida</h3>
-          <p>Todas as cartas passam por verificação profissional antes da venda.</p>
-        </div>
+/* Navbar */
+.navbar {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1.2rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
 
-        <div class="benefit-card">
-          <h3>⭐ Raridade Exclusiva</h3>
-          <p>Acesse edições limitadas, holográficas e promoções especiais.</p>
-        </div>
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-        <div class="benefit-card">
-          <h3>📦 Envio Seguro</h3>
-          <p>Embalagens protegidas e envio rastreável para colecionadores exigentes.</p>
-        </div>
+.logo {
+  color: #ffd700;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
 
-        <div class="benefit-card">
-          <h3>👨‍💼 Suporte Especializado</h3>
-          <p>Nossa equipe entende o mercado Pokémon e está pronta para ajudar você a encontrar a carta perfeita.</p>
-        </div>
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
 
-      </div>
-    </div>
-  </section>
+.navbar a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
 
-  <!-- Trust Section -->
-  <section class="trust">
-    <div class="container">
-      <h2 class="section-title">Confiança que Colecionadores Reconhecem</h2>
-      
-      <div class="trust-content">
-        <div class="trust-item">
-          <h3>Depoimentos</h3>
-          <p>"Consegui minha Charizard 1ª Edição Shadowless com total segurança. Recomendo!"</p>
-          <strong>— Lucas Mendes, SP</strong>
-        </div>
+.navbar a:hover {
+  color: #ffd700;
+}
 
-        <div class="trust-item">
-          <h3>Certificações</h3>
-          <p>✅ PSA Certified • ✅ Beckett Authentication • ✅ Cartas Verificadas</p>
-        </div>
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), 
+              url('https://images.unsplash.com/photo-1613771404784-13c6c8c0c2c4?w=2000') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+}
 
-        <div class="trust-item">
-          <h3>Garantia</h3>
-          <p>Garantia de devolução em caso de problema com autenticidade.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+.headline {
+  font-size: 3.8rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 PokéRare - Cartas Raras de Pokémon Autênticas</p>
-    </div>
-  </footer>
+.subheadline {
+  font-size: 1.45rem;
+  max-width: 750px;
+  margin: 0 auto 45px;
+  color: #bbbbbb;
+}
 
-</body>
-</html>
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ffd700, #ffaa00);
+  color: #000;
+  padding: 18px 38px;
+  border-radius: 50px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(255, 170, 0, 0.4);
+  transition: all 0.4s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(255, 170, 0, 0.5);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  padding: 18px 38px;
+  border: 2px solid #ffd700;
+  border-radius: 50px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.btn-secondary:hover {
+  background: #ffd700;
+  color: #000;
+}
+
+/* Sections */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #ffd700;
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #ffd700, #ff5500);
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Benefícios */
+.benefits {
+  padding: 120px 0;
+  background: #111111;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+.benefit-card {
+  background: linear-gradient(145deg, #1a1a1a, #141414);
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid #333;
+  transition: all 0.4s ease;
+}
+
+.benefit-card:hover {
+  border-color: #ffd700;
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.1);
+}
+
+.benefit-card h3 {
+  color: #ffaa00;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+/* Trust Section */
+.trust {
+  padding: 120px 0;
+  background: #0a0a0a;
+}
+
+.trust-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.trust-item {
+  background: #161616;
+  padding: 35px;
+  border-radius: 16px;
+  border-left: 5px solid #ffd700;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #050505;
+  padding: 50px 0 30px;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+footer p {
+  color: #666;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .headline {
+    font-size: 2.8rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
