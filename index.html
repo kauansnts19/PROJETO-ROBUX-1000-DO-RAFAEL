@@ -3,98 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compre cartas raras de Pokémon autênticas e de coleção. Encontre holográficas, edições limitadas e cartas promocionais com segurança e garantia.">
-  <title>Cartas Raras Pokémon | Coleção Autêntica</title>
+  <title>Toki.Co | Venda e Conserto de Aparelhos Tecnológicos</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <!-- Seu CSS personalizado (se tiver) -->
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Configurações Extras do Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bordo: '#8B1E3F',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="bg-black text-white">
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <h1 class="logo">PokéRare</h1>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Coleção</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- HEADER -->
+  <header class="bg-black border-b border-gray-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-[#8B1E3F] rounded-xl flex items-center justify-center text-2xl font-bold">
+          T
+        </div>
+        <h1 class="text-3xl font-bold tracking-tight">Toki<span class="text-[#8B1E3F]">.Co</span></h1>
+      </div>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container hero-content">
-      <h1 class="headline">Encontre Cartas Raras de Pokémon<br>Autênticas e de Coleção</h1>
-      <p class="subheadline">Transforme sua coleção com cartas cuidadosamente verificadas, avaliadas e entregues com segurança.</p>
-      
-      <div class="cta-buttons">
-        <a href="#" class="btn-primary">Explore Nossa Coleção</a>
-        <a href="#" class="btn-secondary">Adicione Sua Carta Rara Hoje</a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#" class="hover:text-[#8B1E3F] transition">Início</a>
+        <a href="#servicos" class="hover:text-[#8B1E3F] transition">Serviços</a>
+        <a href="#produtos" class="hover:text-[#8B1E3F] transition">Produtos</a>
+        <a href="#sobre" class="hover:text-[#8B1E3F] transition">Sobre</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button id="cart-btn" class="px-5 py-2.5 border border-gray-700 rounded-full hover:border-[#8B1E3F]">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <button class="bg-white text-black px-6 py-2.5 rounded-full font-semibold hover:bg-[#8B1E3F] hover:text-white transition">
+          Entrar
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Benefícios -->
-  <section class="benefits">
-    <div class="container">
-      <h2 class="section-title">Por que escolher a PokéRare?</h2>
-      <div class="benefits-grid">
-        
-        <div class="benefit-card">
-          <h3>🔒 Autenticidade Garantida</h3>
-          <p>Todas as cartas passam por verificação profissional antes da venda.</p>
+  <!-- HERO -->
+  <section class="h-screen flex items-center relative bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center">
+    <div class="absolute inset-0 bg-black/80"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="max-w-3xl">
+        <h2 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+          Bem-vindo à <span class="text-[#8B1E3F]">Toki.Co</span>
+        </h2>
+        <p class="text-2xl md:text-3xl text-gray-200 mb-8">
+          Onde sua tecnologia ganha vida nova.<br>
+          <span class="text-blue-400">Venda • Conserto • Confiança</span>
+        </p>
+        <p class="text-lg text-gray-400 mb-10 max-w-xl">
+          Especialistas em conserto e venda de celulares, notebooks, tablets e muito mais em Curitiba.
+        </p>
+        <div class="flex gap-4">
+          <a href="#servicos" class="bg-[#8B1E3F] hover:bg-[#a6244a] px-8 py-4 rounded-full font-semibold text-lg transition">
+            Nossos Serviços
+          </a>
+          <a href="#produtos" class="border border-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold text-lg transition">
+            Ver Ofertas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="py-20 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Serviços Especializados</h2>
+      <p class="text-center text-gray-400 mb-12 text-lg">Conserto rápido e garantido nos principais dispositivos</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-gray-800 hover:border-[#8B1E3F] transition-all">
+          <i class="fa-solid fa-mobile-screen text-5xl text-[#8B1E3F] mb-6"></i>
+          <h3 class="text-2xl font-semibold mb-3">Celulares</h3>
+          <p class="text-gray-400">iPhone, Samsung, Xiaomi, Motorola e mais</p>
+          <span class="block mt-6 text-[#8B1E3F] font-bold">A partir de R$ 79</span>
         </div>
 
-        <div class="benefit-card">
-          <h3>⭐ Raridade Exclusiva</h3>
-          <p>Acesse edições limitadas, holográficas e promoções especiais.</p>
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-gray-800 hover:border-[#8B1E3F] transition-all">
+          <i class="fa-solid fa-tablet-screen-button text-5xl text-[#8B1E3F] mb-6"></i>
+          <h3 class="text-2xl font-semibold mb-3">Tablets & iPads</h3>
+          <p class="text-gray-400">Troca de tela, bateria, carregamento e software</p>
+          <span class="block mt-6 text-[#8B1E3F] font-bold">A partir de R$ 119</span>
         </div>
 
-        <div class="benefit-card">
-          <h3>📦 Envio Seguro</h3>
-          <p>Embalagens protegidas e envio rastreável para colecionadores exigentes.</p>
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-gray-800 hover:border-[#8B1E3F] transition-all">
+          <i class="fa-solid fa-laptop text-5xl text-[#8B1E3F] mb-6"></i>
+          <h3 class="text-2xl font-semibold mb-3">Notebooks</h3>
+          <p class="text-gray-400">MacBook, Dell, HP, Lenovo e outros</p>
+          <span class="block mt-6 text-[#8B1E3F] font-bold">A partir de R$ 149</span>
         </div>
 
-        <div class="benefit-card">
-          <h3>👨‍💼 Suporte Especializado</h3>
-          <p>Nossa equipe entende o mercado Pokémon e está pronta para ajudar você a encontrar a carta perfeita.</p>
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-gray-800 hover:border-[#8B1E3F] transition-all">
+          <i class="fa-solid fa-gamepad text-5xl text-[#8B1E3F] mb-6"></i>
+          <h3 class="text-2xl font-semibold mb-3">Outros Dispositivos</h3>
+          <p class="text-gray-400">Smartwatches, Fones, Consoles e Acessórios</p>
+          <span class="block mt-6 text-[#8B1E3F] font-bold">A partir de R$ 49</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS - GRID RESPONSIVO -->
+  <section id="produtos" class="py-20 bg-black">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Ofertas em Destaque</h2>
+      <p class="text-center text-gray-400 mb-12">Promoções imperdíveis em placas de vídeo, gabinetes e mais!</p>
+
+      <!-- Grid Container: Responsivo e automático -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Produto 1 -->
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden flex flex-col h-full hover:scale-105 transition-all duration-300 group border border-gray-800 hover:border-[#8B1E3F]">
+          <div class="h-56 w-full bg-zinc-950 flex items-center justify-center overflow-hidden p-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_hU6PU_XJlMX057sVQaQ8GFxiM4yHOEH3Q&s" 
+                 alt="RTX 4070 Ti Super" 
+                 class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="font-bold text-lg mb-1">RTX 4070 Ti Super</h3>
+              <p class="text-sm text-gray-400">12GB GDDR6X • MSI Ventus</p>
+            </div>
+            <div class="mt-4">
+              <span class="block text-2xl font-bold text-[#8B1E3F]">R$ 4.299</span>
+              <span class="text-xs line-through text-gray-500">R$ 4.899,00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden flex flex-col h-full hover:scale-105 transition-all duration-300 group border border-gray-800 hover:border-[#8B1E3F]">
+          <div class="h-56 w-full bg-zinc-950 flex items-center justify-center overflow-hidden p-4">
+            <img src="https://images2.kabum.com.br/produtos/fotos/430152/gabinete-gamer-lancool-216-argb-mid-tower-e-atx-lateral-em-vidro-temperado-3x-cooler-fan-preto-lancool-216rx-black_1681917301_gg.jpg" 
+                 alt="Gabinete Lian Li" 
+                 class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="font-bold text-lg mb-1">Gabinete Gamer RGB</h3>
+              <p class="text-sm text-gray-400">Lian Li Lancool 216</p>
+            </div>
+            <div class="mt-4">
+              <span class="block text-2xl font-bold text-[#8B1E3F]">R$ 894,00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden flex flex-col h-full hover:scale-105 transition-all duration-300 group border border-gray-800 hover:border-[#8B1E3F]">
+          <div class="h-56 w-full bg-zinc-950 flex items-center justify-center overflow-hidden p-4">
+            <img src="https://images8.kabum.com.br/produtos/fotos/sync_mirakl/523518/xlarge/Processador-AMD-Ryzen-5-5600GT-3-6GHz-4-6GHz-Turbo-Cache-19MB-6-N-cleos-V-deo-Integrado-Radeon-AM4-100-100001488BOX_1781013543.jpg" 
+                 alt="Processador AMD" 
+                 class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="font-bold text-lg mb-1">Processador Gamer</h3>
+              <p class="text-sm text-gray-400">AMD Ryzen 5 5600GT</p>
+            </div>
+            <div class="mt-4">
+              <span class="block text-2xl font-bold text-[#8B1E3F]">R$ 897,67</span>
+              <span class="text-xs line-through text-gray-500">R$ 1.120</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden flex flex-col h-full hover:scale-105 transition-all duration-300 group border border-gray-800 hover:border-[#8B1E3F]">
+          <div class="h-56 w-full bg-zinc-950 flex items-center justify-center overflow-hidden p-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnIjxcpRqhShjiaOi1phjxe_lPqpzR2xMtaj2dqbh3VA&s" 
+                 alt="Placa Mãe MSI" 
+                 class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="font-bold text-lg mb-1">Placa Mãe B550</h3>
+              <p class="text-sm text-gray-400">MSI Game Plus</p>
+            </div>
+            <div class="mt-4">
+              <span class="block text-2xl font-bold text-[#8B1E3F]">R$ 720,50</span>
+              <span class="text-xs line-through text-gray-500">R$ 920,00</span>
+            </div>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Trust Section -->
-  <section class="trust">
-    <div class="container">
-      <h2 class="section-title">Confiança que Colecionadores Reconhecem</h2>
-      
-      <div class="trust-content">
-        <div class="trust-item">
-          <h3>Depoimentos</h3>
-          <p>"Consegui minha Charizard 1ª Edição Shadowless com total segurança. Recomendo!"</p>
-          <strong>— Lucas Mendes, SP</strong>
+  <!-- RODAPÉ -->
+  <footer class="bg-zinc-950 py-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="flex items-center justify-center gap-3 mb-6">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-[#8B1E3F] rounded-xl flex items-center justify-center text-2xl font-bold">
+          T
         </div>
-
-        <div class="trust-item">
-          <h3>Certificações</h3>
-          <p>✅ PSA Certified • ✅ Beckett Authentication • ✅ Cartas Verificadas</p>
-        </div>
-
-        <div class="trust-item">
-          <h3>Garantia</h3>
-          <p>Garantia de devolução em caso de problema com autenticidade.</p>
-        </div>
+        <h1 class="text-3xl font-bold tracking-tight">Toki<span class="text-[#8B1E3F]">.Co</span></h1>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 PokéRare - Cartas Raras de Pokémon Autênticas</p>
+      <p class="text-gray-400 mb-6">
+        Sua tecnologia em boas mãos. Especializada em conserto e venda de aparelhos em Curitiba.
+      </p>
+      <div class="flex justify-center gap-6 text-gray-400">
+        <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram text-2xl"></i></a>
+        <a href="#" class="hover:text-white"><i class="fa-brands fa-facebook text-2xl"></i></a>
+        <a href="#" class="hover:text-white"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+      </div>
+      <p class="text-gray-600 mt-12 text-sm">© 2024 Toki.Co. Todos os direitos reservados.</p>
     </div>
   </footer>
 
