@@ -42,14 +42,22 @@
 
     .hide-scroll::-webkit-scrollbar { display: none; }
     .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Responsividade do Carrossel */
+    .product-card {
+      min-width: 280px;
+      width: 280px;
+    }
+    @media (max-width: 768px) {
+      .product-card {
+        min-width: 160px;
+        width: 160px;
+      }
+    }
   </style>
 
 </head>
 <body class="bg-black text-white">
-
-<!-- Adicione esta linha antes do </body> -->
-<script src="script.js"></script>
-
 
   <!-- HEADER -->
   <header class="bg-black border-b border-gray-800 sticky top-0 z-50">
@@ -61,6 +69,7 @@
         <h1 class="text-3xl font-bold tracking-tight">Toki<span class="bordo">.Co</span></h1>
       </div>
 
+      <!-- Nav Desktop -->
       <nav class="hidden md:flex items-center gap-8 font-medium">
         <a href="#" class="hover:text-[#8B1E3F] transition duration-300">Início</a>
         <a href="#servicos" class="hover:text-[#8B1E3F] transition duration-300">Serviços</a>
@@ -152,138 +161,6 @@
           <p class="text-gray-400 mt-2">Promoções imperdíveis em peças e periféricos!</p>
         </div>
         
-        <div class="flex gap-3">
-          <button onclick="scrollCarousel(-1)" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition">
-            <i class="fa-solid fa-arrow-left"></i>
-          </button>
-          <button onclick="scrollCarousel(1)" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition">
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Container do Carrossel -->
-      <div class="overflow-x-auto hide-scroll pb-8" id="carousel-container">
-        <div class="flex gap-6 w-max" id="carousel-track">
-          
-          <!-- Produto 1 -->
-          <div class="min-w-[280px] w-[280px] bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#8B1E3F]">
-            <div class="h-56 bg-zinc-950 flex items-center justify-center p-4">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_hU6PU_XJlMX057sVQaQ8GFxiM4yHOEH3Q&s" alt="RTX 4070 Ti" class="w-full h-full object-contain">
-            </div>
-            <div class="p-6">
-              <h3 class="font-bold text-lg">RTX 4070 Ti Super</h3>
-              <p class="text-sm text-gray-400 mt-1">12GB GDDR6X • MSI Ventus</p>
-              <div class="mt-4">
-                <span class="text-2xl font-bold text-[#8B1E3F]">R$ 4.299</span>
-                <span class="text-xs line-through text-gray-500 ml-2">R$ 4.899</span>
-              </div>
-              <button class="w-full mt-4 bg-[#8B1E3F] hover:bg-[#a6244a] text-white py-2 rounded-lg font-medium transition">
-                Comprar
-              </button>
-            </div>
-          </div>
-
-          <!-- Produto 2 -->
-          <div class="min-w-[280px] w-[280px] bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#8B1E3F]">
-            <div class="h-56 bg-zinc-950 flex items-center justify-center p-4">
-              <img src="https://images2.kabum.com.br/produtos/fotos/430152/gabinete-gamer-lancoil-216-argb-mid-tower-e-atx-lateral-em-vidro-temperado-3x-cooler-fan-preto-lancool-216rx-black_1681917301_gg.jpg" alt="Gabinete Lian Li" class="w-full h-full object-contain">
-            </div>
-            <div class="p-6">
-              <h3 class="font-bold text-lg">Gabinete Lian Li</h3>
-              <p class="text-sm text-gray-400 mt-1">Lancool 216 RGB Black</p>
-              <div class="mt-4">
-                <span class="text-2xl font-bold text-[#8B1E3F]">R$ 894</span>
-              </div>
-              <button class="w-full mt-4 bg-[#8B1E3F] hover:bg-[#a6244a] text-white py-2 rounded-lg font-medium transition">
-                Comprar
-              </button>
-            </div>
-          </div>
-
-          <!-- Produto 3 -->
-          <div class="min-w-[280px] w-[280px] bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#8B1E3F]">
-            <div class="h-56 bg-zinc-950 flex items-center justify-center p-4">
-              <img src="https://images8.kabum.com.br/produtos/fotos/sync_mirakl/523518/xlarge/Processador-AMD-Ryzen-5-5600GT-3-6GHz-4-6GHz-Turbo-Cache-19MB-6-N-cleos-V-deo-Integrado-Radeon-AM4-100-100001488BOX_1781013543.jpg" alt="Ryzen 5 5600GT" class="w-full h-full object-contain">
-            </div>
-            <div class="p-6">
-              <h3 class="font-bold text-lg">Ryzen 5 5600GT</h3>
-              <p class="text-sm text-gray-400 mt-1">6 Nucleos • Radeon Integr.</p>
-              <div class="mt-4">
-                <span class="text-2xl font-bold text-[#8B1E3F]">R$ 897</span>
-                <span class="text-xs line-through text-gray-500 ml-2">R$ 1.120</span>
-              </div>
-              <button class="w-full mt-4 bg-[#8B1E3F] hover:bg-[#a6244a] text-white py-2 rounded-lg font-medium transition">
-                Comprar
-              </button>
-            </div>
-          </div>
-
-          <!-- Produto 4 -->
-          <div class="min-w-[280px] w-[280px] bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#8B1E3F]">
-            <div class="h-56 bg-zinc-950 flex items-center justify-center p-4">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnIjxcpRqhShjiaOi1phjxe_lPqpzR2xMtaj2dqbh3VA&s=10" alt="Placa Mãe B550" class="w-full h-full object-contain">
-            </div>
-            <div class="p-6">
-              <h3 class="font-bold text-lg">Placa Mãe B550</h3>
-              <p class="text-sm text-gray-400 mt-1">MSI B550 GAME PLUS</p>
-              <div class="mt-4">
-                <span class="text-2xl font-bold text-[#8B1E3F]">R$ 720</span>
-                <span class="text-xs line-through text-gray-500 ml-2">R$ 920</span>
-              </div>
-              <button class="w-full mt-4 bg-[#8B1E3F] hover:bg-[#a6244a] text-white py-2 rounded-lg font-medium transition">
-                Comprar
-              </button>
-            </div>
-          </div>
-
-          <!-- Produto 5 -->
-          <div class="min-w-[280px] w-[280px] bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#8B1E3F]">
-            <div class="h-56 bg-zinc-950 flex items-center justify-center p-4">
-              <img src="https://images7.kabum.com.br/produtos/fotos/113024/ryzen-7-5800x3d_01_ba1f36cc-d113-func-f001-002-0_170pxc_08_21613.jpg" alt="Ryzen 7 5800X3D" class="w-full h-full object-contain">
-            </div>
-            <div class="p-6">
-              <h3 class="font-bold text-lg">Ryzen 7 5800X3D</h3>
-              <p class="text-sm text-gray-400 mt-1">8 Nucleos • 3D Cache</p>
-              <div class="mt-4">
-                <span class="text-2xl font-bold text-[#8B1E3F]">R$ 1.899</span>
-                <span class="text-xs line-through text-gray-500 ml-2">R$ 2.299</span>
-              
- <!-- Produto 6 -->
-          <div class="min-w-[280px] w-[280px] bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#8B1E3F]">
-            <div class="h-56 bg-zinc-950 flex items-center justify-center p-4">
-              <img src="https://images7.kabum.com.br/produtos/fotos/113024/ryzen-7-5800x3d_01_ba1f36cc-d113-func-f001-002-0_170pxc_08_21613.jpg" alt="Ryzen 7 5800X3D" class="w-full h-full object-contain">
-            </div>
-            <div class="p-6">
-              <h3 class="font-bold text-lg">Ryzen 7 5800X3D</h3>
-              <p class="text-sm text-gray-400 mt-1">8 Nucleos • 3D Cache</p>
-              <div class="mt-4">
-                <span class="text-2xl font-bold text-[#8B1E3F]">R$ 1.899</span>
-                <span class="text-xs line-through text-gray-500 ml-2">R$ 2.299</span>
-              
-
-
-
-              <script>
-  function scrollCarousel(direction) {
-    const container = document.getElementById('carousel-container');
-    const scrollAmount = 300;
-    
-    container.scrollBy({
-      left: direction * scrollAmount,
-      behavior: 'smooth'
-    });
-  }
-</script><script>
-  function scrollCarousel(direction) {
-    const container = document.getElementById('carousel-container');
-    const scrollAmount = 300;
-    
-    container.scrollBy({
-      left: direction * scrollAmount,
-      behavior: 'smooth'
-    });
-  }
-</script>
-              
-              </div>
+        <!-- Botões de navegação Desktop -->
+        <div class="flex gap-3 md:flex hidden">
+          <button onclick="scrollCarousel(-1)" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg
