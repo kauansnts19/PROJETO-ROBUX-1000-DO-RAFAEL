@@ -42,6 +42,11 @@
 
     .hide-scroll::-webkit-scrollbar { display: none; }
     .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    /* Animação smooth para o carrossel */
+    .carousel-item {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body class="bg-black text-white">
@@ -157,6 +162,7 @@
         </div>
       </div>
 
+      <!-- Container do Carrossel com ID para o JavaScript -->
       <div class="overflow-x-auto hide-scroll pb-8" id="carousel-container">
         <div class="flex gap-6 w-max" id="carousel-track">
           
@@ -168,11 +174,9 @@
             <div class="p-6">
               <h3 class="font-bold text-lg">RTX 4070 Ti Super</h3>
               <p class="text-sm text-gray-400 mt-1">12GB GDDR6X • MSI Ventus</p>
-              <div class="mt-4 flex items-center justify-between">
-                <div>
-                  <span class="text-2xl font-bold text-[#8B1E3F]">R$ 4.299</span>
-                  <span class="text-xs line-through text-gray-500 ml-2">R$ 4.899</span>
-                </div>
+              <div class="mt-4">
+                <span class="text-2xl font-bold text-[#8B1E3F]">R$ 4.299</span>
+                <span class="text-xs line-through text-gray-500 ml-2">R$ 4.899</span>
               </div>
               <button class="w-full mt-4 bg-[#8B1E3F] hover:bg-[#a6244a] text-white py-2 rounded-lg font-medium transition">
                 Comprar
@@ -244,3 +248,5 @@
               <div class="mt-4">
                 <span class="text-2xl font-bold text-[#8B1E3F]">R$ 1.899</span>
                 <span class="text-xs line-through text-gray-500 ml-2">R$ 2.299</span>
+              </div>
+              <button class="w-full mt-4
