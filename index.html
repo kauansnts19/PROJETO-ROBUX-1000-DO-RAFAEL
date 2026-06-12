@@ -1,18 +1,3 @@
-<think>
-O usuário quer o código completo e final do site Toki.Co, com todas as alterações que discutimos (carrossel funcional, responsivo, CSS personalizado inline). Vou gerar o arquivo HTML completo e pronto para uso.
-</think> está o código completo e responsivo do site Toki.Co.
-
-Fiz as seguintes alterações e correções:
-
-1.  **Carrossel Funcional:** Adicionei a lógica JavaScript para as setas funcionarem e滑动 dos produtos sideways.
-2.  **CSS Personalizado Inline:** O código está todo num arquivo só (não precisa de `style.css` externo), facilitando o uso.
-3.  **Imagens Corrigidas:** As imagens agora usam `object-contain` para não distorcerem.
-4.  **Responsividade:** O menu e o carrossel funcionam em telas menores.
-5.  **Botão "Comprar":** Adicionei um botão虚 em cada produto.
-
-Copie e cole o código abaixo:
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -26,7 +11,7 @@ Copie e cole o código abaixo:
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Custom CSS (Incorporado) -->
+  <!-- Custom CSS -->
   <style>
     :root {
       --bordo: #8B1E3F;
@@ -38,7 +23,6 @@ Copie e cole o código abaixo:
     .hover\:border-bordo:hover { border-color: var(--bordo); }
     .hover\:bg-bordo:hover { background-color: #a6244a; }
 
-    /* Fundo do Heroo */
     .hero-bg {
       background: radial-gradient(circle at top right, #1a1a1a, #000000);
       position: relative;
@@ -56,7 +40,6 @@ Copie e cole o código abaixo:
       z-index: 0;
     }
 
-    /* Esconder scrollbar mas permitir rolagem */
     .hide-scroll::-webkit-scrollbar { display: none; }
     .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
@@ -66,7 +49,6 @@ Copie e cole o código abaixo:
   <!-- HEADER -->
   <header class="bg-black border-b border-gray-800 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-5 flex items-center justify-between">
-      <!-- Logo -->
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-[#8B1E3F] rounded-xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-red-900/20">
           T
@@ -74,7 +56,6 @@ Copie e cole o código abaixo:
         <h1 class="text-3xl font-bold tracking-tight">Toki<span class="bordo">.Co</span></h1>
       </div>
 
-      <!-- Navegação Desktop -->
       <nav class="hidden md:flex items-center gap-8 font-medium">
         <a href="#" class="hover:text-[#8B1E3F] transition duration-300">Início</a>
         <a href="#servicos" class="hover:text-[#8B1E3F] transition duration-300">Serviços</a>
@@ -82,7 +63,6 @@ Copie e cole o código abaixo:
         <a href="#sobre" class="hover:text-[#8B1E3F] transition duration-300">Sobre</a>
       </nav>
 
-      <!-- Botões Direita -->
       <div class="flex items-center gap-4">
         <button id="cart-btn" class="p-2.5 border border-gray-700 rounded-full hover:border-[#8B1E3F] transition hidden md:block">
           <i class="fa-solid fa-cart-shopping"></i>
@@ -127,15 +107,13 @@ Copie e cole o código abaixo:
       <p class="text-center text-gray-400 mb-12 text-lg">Conserto rápido e garantido nos principais dispositivos</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Card 1 -->
         <div class="bg-zinc-900 p-8 rounded-3xl border border-gray-800 hover:border-[#8B1E3F] transition-all duration-300 group">
           <i class="fa-solid fa-mobile-screen text-5xl bordo mb-6 group-hover:scale-110 transition-transform"></i>
           <h3 class="text-2xl font-semibold mb-3">Celulares</h3>
-          <p class="text-gray-400 text-sm">iPhone, Samsung, Xiaomi, Motorola e mais</p>
+          <p class="text-gray-400 text-sm">iPhone, Samsung, Xiaomi, Motorola</p>
           <span class="block mt-4 text-[#8B1E3F] font-bold">A partir de R$ 79</span>
         </div>
 
-        <!-- Card 2 -->
         <div class="bg-zinc-900 p-8 rounded-3xl border border-gray-800 hover:border-[#8B1E3F] transition-all duration-300 group">
           <i class="fa-solid fa-tablet-screen-button text-5xl bordo mb-6 group-hover:scale-110 transition-transform"></i>
           <h3 class="text-2xl font-semibold mb-3">Tablets & iPads</h3>
@@ -143,15 +121,13 @@ Copie e cole o código abaixo:
           <span class="block mt-4 text-[#8B1E3F] font-bold">A partir de R$ 119</span>
         </div>
 
-        <!-- Card 3 -->
         <div class="bg-zinc-900 p-8 rounded-3xl border border-gray-800 hover:border-[#8B1E3F] transition-all duration-300 group">
           <i class="fa-solid fa-laptop text-5xl bordo mb-6 group-hover:scale-110 transition-transform"></i>
           <h3 class="text-2xl font-semibold mb-3">Notebooks</h3>
-          <p class="text-gray-400 text-sm">MacBook, Dell, HP, Lenovo e outros</p>
+          <p class="text-gray-400 text-sm">MacBook, Dell, HP, Lenovo</p>
           <span class="block mt-4 text-[#8B1E3F] font-bold">A partir de R$ 149</span>
         </div>
 
-        <!-- Card 4 -->
         <div class="bg-zinc-900 p-8 rounded-3xl border border-gray-800 hover:border-[#8B1E3F] transition-all duration-300 group">
           <i class="fa-solid fa-gamepad text-5xl bordo mb-6 group-hover:scale-110 transition-transform"></i>
           <h3 class="text-2xl font-semibold mb-3">Outros</h3>
@@ -162,7 +138,7 @@ Copie e cole o código abaixo:
     </div>
   </section>
 
-  <!-- PRODUTOS (CARROSSEL) -->
+  <!-- PRODUTOS (CARROSSEL COM 12 PRODUTOS) -->
   <section id="produtos" class="py-20 bg-black relative">
     <div class="max-w-7xl mx-auto px-4 md:px-6">
       <div class="flex justify-between items-end mb-8">
@@ -171,7 +147,6 @@ Copie e cole o código abaixo:
           <p class="text-gray-400 mt-2">Promoções imperdíveis em peças e periféricos!</p>
         </div>
         
-        <!-- Botões de Navegação -->
         <div class="flex gap-3">
           <button onclick="scrollCarousel(-1)" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition">
             <i class="fa-solid fa-arrow-left"></i>
@@ -182,14 +157,13 @@ Copie e cole o código abaixo:
         </div>
       </div>
 
-      <!-- Container do Carrossel -->
       <div class="overflow-x-auto hide-scroll pb-8" id="carousel-container">
         <div class="flex gap-6 w-max" id="carousel-track">
           
           <!-- Produto 1 -->
           <div class="min-w-[280px] w-[280px] bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#8B1E3F]">
             <div class="h-56 bg-zinc-950 flex items-center justify-center p-4">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_hU6PU_XJlMX057sVQaQ8GFxiM4yHOEH3Q&s" alt="RTX 4070 Ti" class="w-full h-full object-contain hover:scale-110 transition-transform duration-500">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_hU6PU_XJlMX057sVQaQ8GFxiM4yHOEH3Q&s" alt="RTX 4070 Ti" class="w-full h-full object-contain">
             </div>
             <div class="p-6">
               <h3 class="font-bold text-lg">RTX 4070 Ti Super</h3>
@@ -209,15 +183,13 @@ Copie e cole o código abaixo:
           <!-- Produto 2 -->
           <div class="min-w-[280px] w-[280px] bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#8B1E3F]">
             <div class="h-56 bg-zinc-950 flex items-center justify-center p-4">
-              <img src="https://images2.kabum.com.br/produtos/fotos/430152/gabinete-gamer-lancoil-216-argb-mid-tower-e-atx-lateral-em-vidro-temperado-3x-cooler-fan-preto-lancool-216rx-black_1681917301_gg.jpg" alt="Gabinete Lian Li" class="w-full h-full object-contain hover:scale-110 transition-transform duration-500">
+              <img src="https://images2.kabum.com.br/produtos/fotos/430152/gabinete-gamer-lancoil-216-argb-mid-tower-e-atx-lateral-em-vidro-temperado-3x-cooler-fan-preto-lancool-216rx-black_1681917301_gg.jpg" alt="Gabinete Lian Li" class="w-full h-full object-contain">
             </div>
             <div class="p-6">
               <h3 class="font-bold text-lg">Gabinete Lian Li</h3>
               <p class="text-sm text-gray-400 mt-1">Lancool 216 RGB Black</p>
-              <div class="mt-4 flex items-center justify-between">
-                <div>
-                  <span class="text-2xl font-bold text-[#8B1E3F]">R$ 894</span>
-                </div>
+              <div class="mt-4">
+                <span class="text-2xl font-bold text-[#8B1E3F]">R$ 894</span>
               </div>
               <button class="w-full mt-4 bg-[#8B1E3F] hover:bg-[#a6244a] text-white py-2 rounded-lg font-medium transition">
                 Comprar
@@ -228,16 +200,14 @@ Copie e cole o código abaixo:
           <!-- Produto 3 -->
           <div class="min-w-[280px] w-[280px] bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#8B1E3F]">
             <div class="h-56 bg-zinc-950 flex items-center justify-center p-4">
-              <img src="https://images8.kabum.com.br/produtos/fotos/sync_mirakl/523518/xlarge/Processador-AMD-Ryzen-5-5600GT-3-6GHz-4-6GHz-Turbo-Cache-19MB-6-N-cleos-V-deo-Integrado-Radeon-AM4-100-100001488BOX_1781013543.jpg" alt="Ryzen 5 5600GT" class="w-full h-full object-contain hover:scale-110 transition-transform duration-500">
+              <img src="https://images8.kabum.com.br/produtos/fotos/sync_mirakl/523518/xlarge/Processador-AMD-Ryzen-5-5600GT-3-6GHz-4-6GHz-Turbo-Cache-19MB-6-N-cleos-V-deo-Integrado-Radeon-AM4-100-100001488BOX_1781013543.jpg" alt="Ryzen 5 5600GT" class="w-full h-full object-contain">
             </div>
             <div class="p-6">
               <h3 class="font-bold text-lg">Ryzen 5 5600GT</h3>
-              <p class="text-sm text-gray-400 mt-1">6 Nucleos • Radeon Integrado</p>
-              <div class="mt-4 flex items-center justify-between">
-                <div>
-                  <span class="text-2xl font-bold text-[#8B1E3F]">R$ 897</span>
-                  <span class="text-xs line-through text-gray-500 ml-2">R$ 1.120</span>
-                </div>
+              <p class="text-sm text-gray-400 mt-1">6 Nucleos • Radeon Integr.</p>
+              <div class="mt-4">
+                <span class="text-2xl font-bold text-[#8B1E3F]">R$ 897</span>
+                <span class="text-xs line-through text-gray-500 ml-2">R$ 1.120</span>
               </div>
               <button class="w-full mt-4 bg-[#8B1E3F] hover:bg-[#a6244a] text-white py-2 rounded-lg font-medium transition">
                 Comprar
@@ -248,16 +218,14 @@ Copie e cole o código abaixo:
           <!-- Produto 4 -->
           <div class="min-w-[280px] w-[280px] bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#8B1E3F]">
             <div class="h-56 bg-zinc-950 flex items-center justify-center p-4">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnIjxcpRqhShjiaOi1phjxe_lPqpzR2xMtaj2dqbh3VA&s=10" alt="Placa Mãe B550" class="w-full h-full object-contain hover:scale-110 transition-transform duration-500">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnIjxcpRqhShjiaOi1phjxe_lPqpzR2xMtaj2dqbh3VA&s=10" alt="Placa Mãe B550" class="w-full h-full object-contain">
             </div>
             <div class="p-6">
               <h3 class="font-bold text-lg">Placa Mãe B550</h3>
               <p class="text-sm text-gray-400 mt-1">MSI B550 GAME PLUS</p>
-              <div class="mt-4 flex items-center justify-between">
-                <div>
-                  <span class="text-2xl font-bold text-[#8B1E3F]">R$ 720</span>
-                  <span class="text-xs line-through text-gray-500 ml-2">R$ 920</span>
-                </div>
+              <div class="mt-4">
+                <span class="text-2xl font-bold text-[#8B1E3F]">R$ 720</span>
+                <span class="text-xs line-through text-gray-500 ml-2">R$ 920</span>
               </div>
               <button class="w-full mt-4 bg-[#8B1E3F] hover:bg-[#a6244a] text-white py-2 rounded-lg font-medium transition">
                 Comprar
@@ -268,4 +236,11 @@ Copie e cole o código abaixo:
           <!-- Produto 5 -->
           <div class="min-w-[280px] w-[280px] bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#8B1E3F]">
             <div class="h-56 bg-zinc-950 flex items-center justify-center p-4">
-             
+              <img src="https://images7.kabum.com.br/produtos/fotos/113024/ryzen-7-5800x3d_01_ba1f36cc-d113-func-f001-002-0_170pxc_08_21613.jpg" alt="Ryzen 7 5800X3D" class="w-full h-full object-contain">
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg">Ryzen 7 5800X3D</h3>
+              <p class="text-sm text-gray-400 mt-1">8 Nucleos • 3D Cache</p>
+              <div class="mt-4">
+                <span class="text-2xl font-bold text-[#8B1E3F]">R$ 1.899</span>
+                <span class="text-xs line-through text-gray-500 ml-2">R$ 2.299</span>
